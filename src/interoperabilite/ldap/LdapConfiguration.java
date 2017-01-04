@@ -55,7 +55,7 @@ public class LdapConfiguration {
 	public static synchronized LdapConfiguration getInstance() {
 		if (INSTANCE == null) {
 			ArrayList<LdapConfiguration> configs = JsonManager.getInstance()
-					.<LdapConfiguration>readFromFile("configuration.json",".\\config\\",LdapConfiguration.class);
+					.<LdapConfiguration>readFromFile("configuration.json","./config/",LdapConfiguration.class);
 			for (LdapConfiguration ldapConfiguration : configs) {
 				INSTANCE = ldapConfiguration;
 			}
