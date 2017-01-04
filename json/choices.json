@@ -1,0 +1,8 @@
+[
+    {
+        "1" : "A - CREATE",
+        "2" : "B - READ",
+        "3" : "C - UPDATE",
+        "4" : "D - DELETE"
+    }
+]
