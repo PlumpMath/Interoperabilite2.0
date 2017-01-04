@@ -512,7 +512,7 @@ public class LdapManager {
 			promotion.getUsers().add(
 					new User(0, user_ldapitem.getName(), user_ldapitem
 							.getGivenName(), "", "", user_ldapitem
-							.getObjectGUID(), null));
+							.getObjectGUID()));
 		}
 
 		return promotion.getUsers();
@@ -606,4 +606,24 @@ public class LdapManager {
 
 		return promotions;
 	}
+	
+	
+	
+	public ArrayList<Teacher> getAllTeatcher(String school) {
+		
+		String requestBase = "OU=Formateurs_externes,OU=Utilisateurs,OU=Formation,OU="
+				+ school + ",OU=Sites";
+		ArrayList<LdapItem> items = this.request(requestBase, false);
+
+		ArrayList<Teacher> teachers = new ArrayList<Teacher>();
+
+		for (LdapItem ldapItem : items) {
+			teachers.add(new Teacher(0, ldapItem.getName(), ldapItem
+							.getGivenName(), "", "", ldapItem
+							.getObjectGUID()));
+		}
+
+		return teachers;
+	}
+
 }

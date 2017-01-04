@@ -1,5 +1,7 @@
 package interoperabilite.ldap;
 
+import java.util.ArrayList;
+
 public class Main {
 	public static void main(String[] args) {
 		// LdapManager.getInstance().request("OU=Utilisateurs,OU=Formation,OU=RENNES,OU=Sites");
@@ -24,8 +26,13 @@ public class Main {
 		OU=Eleves,OU=Utilisateurs,OU=Formation,OU=RENNES,OU=Sites
 		OU=Formateurs_Externes,OU=Utilisateurs,OU=Formation,OU=RENNES,OU=Sites*/
 
-		LdapManager.getInstance().requestInspector("OU=Sites", true);
-
+		//LdapManager.getInstance().requestInspector("OU=Sites", true);
+		ArrayList<Teacher> items = LdapManager.getInstance().getAllTeatcher("RENNES");
+		
+		for (Teacher teacher : items) {
+			System.out.println(teacher.getFirstname());
+		}
+		//LdapManager.getAllTeatcher();
 		/*ArrayList<Promotion> items = LdapManager.getInstance().getAllPromotions("RENNES");
 
 		for (Promotion promotion : items) {

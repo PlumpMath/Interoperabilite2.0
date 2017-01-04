@@ -57,16 +57,8 @@ public class User {
 		this.guid = guid;
 	}
 
-	public Promotion getPromotion() {
-		return promotion;
-	}
-
-	public void setPromotion(Promotion promotion) {
-		this.promotion = promotion;
-	}
-
 	public User(int id, String firstname, String lastname, String login,
-			String password, byte[] guid, Promotion promotion) {
+			String password, byte[] guid) {
 		super();
 		this.id = id;
 		this.firstname = firstname;
@@ -74,7 +66,6 @@ public class User {
 		this.login = login;
 		this.password = password;
 		this.guid = guid;
-		this.promotion = promotion;
 	}
 
 	public User() {
