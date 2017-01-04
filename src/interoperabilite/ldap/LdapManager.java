@@ -1,9 +1,9 @@
 package interoperabilite.ldap;
 
-import interoperabilite.ldap.entities.LdapConfiguration;
-import interoperabilite.ldap.entities.LdapItem;
-import interoperabilite.ldap.entities.imie.Promotion;
-import interoperabilite.ldap.entities.imie.User;
+import interoperabilite.ldap.LdapConfiguration;
+import interoperabilite.ldap.LdapItem;
+import interoperabilite.ldap.Promotion;
+import interoperabilite.ldap.User;
 
 import java.util.ArrayList;
 import java.util.Hashtable;

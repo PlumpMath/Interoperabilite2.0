@@ -2,9 +2,9 @@ package interoperabilite.json;
 
 import java.util.ArrayList;
 import java.util.Date;
-import interoperabilite.json.entities.Document;
-import interoperabilite.json.entities.User;
-import interoperabilite.json.manager.JsonManager;
+import interoperabilite.json.Document;
+import interoperabilite.json.User;
+import interoperabilite.json.JsonManager;
 
 public class Main {
 

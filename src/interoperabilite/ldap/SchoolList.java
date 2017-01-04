@@ -1,15 +1,11 @@
 package interoperabilite.ldap;
 
-import interoperabilite.json.manager.JsonManager;
-import interoperabilite.ldap.entities.LdapConfiguration;
-import interoperabilite.ldap.entities.imie.School;
+import interoperabilite.json.JsonManager;
 
 import java.util.ArrayList;
 
 public class SchoolList {
 	private ArrayList<School> schools;
-	
-	// 12h30. <3
 
 	public ArrayList<School> getSchools() {
 		return schools;

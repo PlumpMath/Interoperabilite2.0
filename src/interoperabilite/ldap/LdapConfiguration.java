@@ -1,9 +1,8 @@
 package interoperabilite.ldap;
 
-import java.util.ArrayList;
+import interoperabilite.json.JsonManager;
 
-import interoperabilite.json.manager.JsonManager;
-import interoperabilite.ldap.manager.LdapManager;
+import java.util.ArrayList;
 
 public class LdapConfiguration {
 

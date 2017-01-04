@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import org.codehaus.jackson.JsonParseException;
-import org.codehaus.jackson.annotate.JsonProperty;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 

@@ -1,7 +1,7 @@
 package interoperabilite.ldap;
 
-import interoperabilite.json.manager.JsonManager;
-import interoperabilite.ldap.entities.imie.Promotion;
+import interoperabilite.json.JsonManager;
+import interoperabilite.ldap.Promotion;
 
 import java.util.ArrayList;
 

@@ -1,13 +1,5 @@
 package interoperabilite.ldap;
 
-import java.util.ArrayList;
-
-import interoperabilite.json.manager.JsonManager;
-import interoperabilite.ldap.entities.LdapItem;
-import interoperabilite.ldap.entities.imie.Promotion;
-import interoperabilite.ldap.entities.imie.User;
-import interoperabilite.ldap.manager.LdapManager;
-
 public class Main {
 	public static void main(String[] args) {
 		// LdapManager.getInstance().request("OU=Utilisateurs,OU=Formation,OU=RENNES,OU=Sites");
