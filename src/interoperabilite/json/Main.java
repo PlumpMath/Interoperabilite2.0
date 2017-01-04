@@ -27,7 +27,7 @@ public class Main {
 		users.add(user1);
 		users.add(user2);
 		
-		exportData("test4.json", users);
+		exportData("test5.json", users);
 		
 		
 		/*userCreation();
@@ -100,26 +100,19 @@ public class Main {
 		extracteds = JsonManager.getInstance().<Document> readFromFile(filename, Document.class);
 		
 		for (Document item : extracteds) {
-			System.out.println("////////////////");
+			System.out.println("import : ");
 			System.out.println(item);
-			System.out.println("////////////////");
+			System.out.println("");
 		}	
 		return null;
 	}
 	
 	public static <T> ArrayList<T> exportData(String filename, ArrayList<?> objects) {
-		
-		
-		for (Object item : objects) {
-			System.out.println("////////////////");
-			System.out.println(item.toString());
-			System.out.println("////////////////");
-			System.out
-					.println(JsonManager.getInstance().addItem(item).toJSON());
-			System.out.println("////////////////");
-		}
 
-		JsonManager.getInstance().sendToFile();
+		for (Object item : objects) {
+			JsonManager.getInstance().addItem(item).toJSON();
+		}
+		JsonManager.getInstance().sendToFile(filename);
 		return null;
 	}
 	
