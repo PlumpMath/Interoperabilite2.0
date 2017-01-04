@@ -10,11 +10,31 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		userCreation();
+		importData("test2.json");
+		
+		User user1 = new User(1, "jean", "piere", "jeanpierre@gmail.com",
+				"jeanjean", "password1!", new Date(), new ArrayList<Document>());
+		user1.addDocument(new Document(1, "doc1", "http://mydoc.com/doc"))
+				.addDocument(new Document(2, "doc2", "http://mydoc2.com/doc"));
+
+		User user2 = new User(2, "yvi", "po", "ypo@gmail.com", "yvipo",
+				"password2!", new Date(), new ArrayList<Document>());
+		user2.addDocument(new Document(1, "myDoc", "http://mydoc.com/doc"))
+				.addDocument(
+						new Document(2, "otherDoc", "http://mydoc2.com/doc"));
+
+		ArrayList<User> users = new ArrayList<User>();
+		users.add(user1);
+		users.add(user2);
+		
+		exportData("test4.json", users);
+		
+		
+		/*userCreation();
 		documentCreation();
 
 		userExtraction();
-		documentExtraction();
+		documentExtraction();*/
 	}
 
 	private static void documentExtraction() {
@@ -74,4 +94,33 @@ public class Main {
 
 		JsonManager.getInstance().sendToFile();
 	}
+	
+	public static <T> ArrayList<T> importData(String filename) {
+		ArrayList<Document> extracteds = new ArrayList<Document>();
+		extracteds = JsonManager.getInstance().<Document> readFromFile(filename, Document.class);
+		
+		for (Document item : extracteds) {
+			System.out.println("////////////////");
+			System.out.println(item);
+			System.out.println("////////////////");
+		}	
+		return null;
+	}
+	
+	public static <T> ArrayList<T> exportData(String filename, ArrayList<?> objects) {
+		
+		
+		for (Object item : objects) {
+			System.out.println("////////////////");
+			System.out.println(item.toString());
+			System.out.println("////////////////");
+			System.out
+					.println(JsonManager.getInstance().addItem(item).toJSON());
+			System.out.println("////////////////");
+		}
+
+		JsonManager.getInstance().sendToFile();
+		return null;
+	}
+	
 }
